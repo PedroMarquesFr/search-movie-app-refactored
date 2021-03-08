@@ -9,7 +9,6 @@ export default function WTF() {
       <GlobalStyle />
       <Header />
       <div>
-        ola
         <Home />
       </div>
     </MoviesContext>

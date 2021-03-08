@@ -7,6 +7,7 @@ import { Container } from './styles';
 const MoviesWrap: React.FC = () => {
   const {
     movieArray,
+    term
   } = useContext(Context);
 
   return (
