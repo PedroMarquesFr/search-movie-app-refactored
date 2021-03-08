@@ -8,6 +8,9 @@ import {
   Info,
   Title as TitleInfo,
   OtherInfos,
+  MovieIcon,
+  SerieIcon,
+  GameIcon
 } from "./styles";
 
 const MovieContainer: React.FC<{ movie: Movie }> = ({
@@ -16,6 +19,9 @@ const MovieContainer: React.FC<{ movie: Movie }> = ({
   return (
     <Link href="/movies/[id]" as={`/movies/${imdbID}`}>
       <Container>
+        {Type==='movie'?<MovieIcon />:null}
+        {Type==='series'?<SerieIcon />:null}
+        {Type==='game'?<GameIcon />:null}
         <Banner src={Poster} alt="Poster" />
         <Info>
           <OtherInfos>{Type.toUpperCase()}</OtherInfos>
