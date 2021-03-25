@@ -2,22 +2,20 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import { MovieDetails } from "../../interfaces";
 import { filmDetails } from "../../services/api";
+import Details from "../../components/Details";
 
 // import { Container } from './styles';
 
-const Details: React.FC<{ movie: MovieDetails }> = ({ movie }) => {
+const Detailss: React.FC<{ movie: MovieDetails }> = ({ movie }) => {
   console.log(movie);
   return (
     <div>
-      <span>{movie.Title}</span>
-      <span>{movie.Rated}</span>
-      <span>{movie.Year}</span>
-      <img src={movie.Poster}></img>
+      <Details movie={movie} />
     </div>
   );
 };
 
-export default Details;
+export default Detailss;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   console.log(context.query);
