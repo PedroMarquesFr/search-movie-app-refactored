@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import Context from "../../contextAPI/setup";
+import Logo from "./PopSearch.svg";
 
 import { Head, Sec } from "./styles";
 let timer: any = null;
@@ -27,6 +28,7 @@ const Header: React.FC = () => {
   };
   return (
     <Head>
+      <Logo/>
       <Sec>
         <input placeholder="Busque por um filme" onChange={handleDelay} />
       </Sec>

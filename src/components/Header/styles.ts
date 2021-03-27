@@ -5,7 +5,7 @@ export const Head = styled.header`
   align-items:center;
   justify-content:center;
   color:white;
-  background-color: #2b2b40;
+  background-color: #273B43;
 
   padding:3rem 2rem;
 
@@ -22,9 +22,10 @@ export const Sec = styled.section`
   justify-content:space-between;
 
   > input{
-    width:30rem;
+    width:40vw;
     padding:.7rem 1rem;
     border:1px solid #d8d8d8;
     font-size:1.3rem;
+    border-radius:13px;
   }
 `;
