@@ -7,14 +7,14 @@ export const Head = styled.header`
   color:white;
   background-color: #273B43;
 
-  padding:3rem 2rem;
+  padding:1.3rem 2rem;
 
   position:relative;
 `;
 
 export const Sec = styled.section`
   position:absolute;
-  top:4.8rem;
+  top:4rem;
 
   border-radius:30px;
 

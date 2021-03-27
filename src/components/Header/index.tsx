@@ -1,17 +1,24 @@
 import React, { useState, useContext, useEffect } from "react";
 import Context from "../../contextAPI/setup";
 import Logo from "./PopSearch.svg";
+import styles from "./header.module.css";
+import { useRouter } from "next/router";
 
-import { Head, Sec } from "./styles";
+// import { Head, Sec } from "./styles";
 let timer: any = null;
 const Header: React.FC = () => {
   const { handleFetchByQuery } = useContext(Context);
+  const router = useRouter();
 
   const [movie, setMovie] = useState("");
 
   useEffect(() => {
+    console.log("fui chamado")
     timer = setTimeout(() => {
       handleFetchByQuery(movie);
+      if(movie){
+        router.push("/");
+      }
     }, 500);
   }, [movie]);
 
@@ -27,12 +34,13 @@ const Header: React.FC = () => {
     setMovie(e.target.value);
   };
   return (
-    <Head>
+    <header className={styles.Head}>
+      {movie}
       <Logo/>
-      <Sec>
-        <input placeholder="Busque por um filme" onChange={handleDelay} />
-      </Sec>
-    </Head>
+      <section className={styles.Sec}>
+        <input placeholder="Busque por um filmes, jogos e series" onChange={handleDelay} />
+      </section>
+    </header>
   );
 };
 
