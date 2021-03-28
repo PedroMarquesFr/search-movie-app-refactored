@@ -35,7 +35,6 @@ const Header: React.FC = () => {
   };
   return (
     <header className={styles.Head}>
-      {movie}
       <Logo/>
       <section className={styles.Sec}>
         <input placeholder="Busque por um filmes, jogos e series" onChange={handleDelay} />

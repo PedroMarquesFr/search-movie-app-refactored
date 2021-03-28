@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  background-color: #F2F2F2;
+
+  padding: 3px 0 3px 3px;
+  border-radius: 20px;
+}
+.image {
+  width: 5rem;
+  height: 5rem;
+  background-color: #9A9A9A;
+  margin-bottom: 5px;
+  border-radius: 20px;
+
+  animation: pulse 0.8s infinite ease-in;
+  -webkit-animation: pulse 0.8s infinite ease-in;
+}
+
+.section{
+  margin-right: 1.2rem;
+}
+
+.section:last-child {
+  margin-right: .2rem;
+}
+
+.name {
+  width: 3.5rem;
+  height: 1.4rem;
+  background-color: #9A9A9A;
+  border-radius: 10px;
+
+  animation: pulse 0.8s infinite ease-in;
+  -webkit-animation: pulse 0.8s infinite ease-in;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

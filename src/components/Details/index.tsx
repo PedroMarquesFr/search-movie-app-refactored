@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MovieDetails } from "../../interfaces";
 import { getActorsLinks } from "../../services/api";
 import Header from "../Header";
+import Load from "../Load";
 import styles from "./details.module.css";
 
 import { Container, LeftSide, RightSide, Info } from "./styles";
@@ -60,12 +61,16 @@ const Details: React.FC<{ movie: MovieDetails }> = ({ movie }) => {
             <aside className={styles.Aside}>
               <h1 className={styles.Title}>Actors</h1>
               <div className={styles.ActorSection}>
-                {images.map((link, index) => (
-                  <div className={styles.ActorWrapper} key={index}>
-                    <img className={styles.ActorImg} src={link} alt="actor" />
-                    <span>{movie.Actors.split(",")[index]}</span>
-                  </div>
-                ))}
+                {images.length === 0 ? (
+                  <Load />
+                ) : (
+                  images.map((link, index) => (
+                    <div className={styles.ActorWrapper} key={index}>
+                      <img className={styles.ActorImg} src={link} alt="actor" />
+                      <span>{movie.Actors.split(",")[index]}</span>
+                    </div>
+                  ))
+                )}
               </div>
             </aside>
             <aside>

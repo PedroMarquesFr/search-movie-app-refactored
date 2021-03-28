@@ -26,3 +26,6 @@
     font-size:1.3rem;
     border-radius:13px;
 }
+.Sec input::placeholder{
+    color: #273b4375;
+}
