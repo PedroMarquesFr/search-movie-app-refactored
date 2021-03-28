@@ -16,9 +16,6 @@ const Header: React.FC = () => {
     console.log("fui chamado")
     timer = setTimeout(() => {
       handleFetchByQuery(movie);
-      if(movie){
-        router.push("/");
-      }
     }, 500);
   }, [movie]);
 
@@ -37,10 +34,10 @@ const Header: React.FC = () => {
     <header className={styles.Head}>
       <Logo/>
       <section className={styles.Sec}>
-        <input placeholder="Busque por um filmes, jogos e series" onChange={handleDelay} />
+        <input onClick={()=>router.push("/")} placeholder="Busque por um filmes, jogos e series" onChange={handleDelay} />
       </section>
     </header>
-  );
+  );  
 };
 
 export default Header;
