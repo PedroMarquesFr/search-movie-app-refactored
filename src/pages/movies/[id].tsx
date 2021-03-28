@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import { MovieDetails } from "../../interfaces";
 import { filmDetails } from "../../services/api";
 import Details from "../../components/Details";
+import Head from "../../components/Head";
 
 // import { Container } from './styles';
 
@@ -10,6 +11,7 @@ const Detailss: React.FC<{ movie: MovieDetails }> = ({ movie }) => {
   console.log(movie);
   return (
     <div>
+      <Head title={movie.Title}/>
       <Details movie={movie} />
     </div>
   );
