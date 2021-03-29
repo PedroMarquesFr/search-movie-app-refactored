@@ -15,6 +15,9 @@ const Header: React.FC = () => {
   useEffect(() => {
     console.log("fui chamado")
     timer = setTimeout(() => {
+      if(movie===""){
+        return null
+      }
       handleFetchByQuery(movie);
     }, 500);
   }, [movie]);
