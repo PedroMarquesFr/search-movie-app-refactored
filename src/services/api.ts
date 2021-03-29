@@ -15,7 +15,7 @@ export async function filmDetails(
   id: string | string[]
 ): Promise<MovieDetails> {
   return axios
-    .get(`http://www.omdbapi.com/?i=${id}&apikey=${key}`)
+    .get(`https://www.omdbapi.com/?i=${id}&apikey=${key}`)
     .then((r) => r.data)
     .catch((deupau) => deupau);
 }
